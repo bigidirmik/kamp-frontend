@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'northwind';
+  title: string = 'northwind'; // bu şekilde veri tipi güvenli hale getirebiliriz. :string
+  user: string = "Bilal Dırmık";
+  
 }
