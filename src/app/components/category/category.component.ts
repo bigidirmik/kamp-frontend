@@ -23,16 +23,23 @@ export class CategoryComponent implements OnInit {
     });
   }
 
-  setCurrentCategory(category:Category){
+  setCurrentCategory(category: Category) {
     this.currentCategory = category;
   }
 
-  getCurrentCategoryClass(category:Category){
-    if(category == this.currentCategory){
-      return "list-group-item active"
+  getCurrentCategoryClass(category: Category) {
+    if (category == this.currentCategory) {
+      return 'list-group-item active';
+    } else {
+      return 'list-group-item';
     }
-    else{
-      return "list-group-item"
+  }
+
+  getAllCategoryClass() {
+    if (!this.currentCategory) {
+      return 'list-group-item active';
+    } else {
+      return 'list-group-item';
     }
   }
 }
