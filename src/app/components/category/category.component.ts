@@ -10,6 +10,7 @@ import { CategoryService } from 'src/app/services/category.service';
 export class CategoryComponent implements OnInit {
   categories: Category[] = [];
   currentCategory: Category;
+  nullCategory: Category;
 
   constructor(private categoryService: CategoryService) {}
 
@@ -25,6 +26,10 @@ export class CategoryComponent implements OnInit {
 
   setCurrentCategory(category: Category) {
     this.currentCategory = category;
+  }
+
+  resetCurrentCategory() {
+    this.currentCategory = this.nullCategory;
   }
 
   getCurrentCategoryClass(category: Category) {

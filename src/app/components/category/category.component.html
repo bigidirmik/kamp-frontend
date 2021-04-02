@@ -1,5 +1,9 @@
 <ul class="list-group">
-  <li routerLink="/products" [class]="getAllCategoryClass()">
+  <li
+    routerLink="/products"
+    [class]="getAllCategoryClass()"
+    (click)="resetCurrentCategory()"
+  >
     Tüm Ürünler
   </li>
   <li
